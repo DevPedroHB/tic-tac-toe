@@ -82,7 +82,17 @@ export default function Index() {
         </GameMenu>
         <Game>
           {new Array(9).fill(true).map((_, i) => (
-            <GameButton key={i} onClick={() => handlePlay(i)}>
+            <GameButton
+              key={i}
+              onClick={() => handlePlay(i)}
+              className={
+                winner || draw
+                  ? marks[i] != winner
+                    ? "loser"
+                    : undefined
+                  : undefined
+              }
+            >
               {marks[i]}
             </GameButton>
           ))}

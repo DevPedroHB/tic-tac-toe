@@ -42,6 +42,10 @@ export const Game = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.75rem;
+
+  .loser {
+    opacity: 75%;
+  }
 `;
 
 export const GameButton = styled.div`
